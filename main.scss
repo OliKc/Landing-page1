@@ -1,3 +1,27 @@
+html,
 body {
-    color: red;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+
+
+    h1 {
+        color: red;
+    }
+}
+
+.bg-img {}
+
+.scrl-img {}
+
+#img1 {
+    background: url('img/forest-landscape-mountain-range-129105.jpg');
+}
+
+#img2 {
+    background: url('img/mountains-clouds-forest-trees.jpg');
+}
+
+#img3 {
+    background: url('img/pexels-photo-442645.jpg');
 }
