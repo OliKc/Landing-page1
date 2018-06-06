@@ -1,8 +1,13 @@
 $light-color: #eeeeee;
-$dark-color: #222222;
+$dark-color: #323232;
+$grey: #767676;
 
 * {
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 html,
@@ -13,12 +18,13 @@ body {
     font-family: "Lucida Sans Unicode", Verdana, sans-serif;
     background-color: #85adad;
 
-    section {
+    > section {
         text-align: center;
         line-height: 1.9;
         padding: 40px 15%;
 
         h1 {
+            letter-spacing: 2px;
 
             &:after {
                 content: '';
@@ -31,7 +37,32 @@ body {
     }
 
     footer {
-        min-height: 300px;
+        min-height: 200px;
+        background-color: #476b6b;
+        position: relative;
+
+        nav {
+            display: inline-block;
+            position: relative;
+            margin-left: 15%;
+
+            section {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px;
+
+                h5 {
+                    text-transform: uppercase;
+                    color: $light-color;
+                }
+
+                ul {
+                    padding-left: 0;
+                    color: $grey;
+                    font-size: 0.875em;
+                }
+            }
+        }
     }
 }
 
@@ -48,7 +79,7 @@ body {
 }
 
 .scrl-img {
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .text-border {
@@ -61,11 +92,54 @@ body {
 .img-text {
     position: absolute;
     width: 100%;
-    top: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 4px;
+
+    @media(max-width: 568px) {
+        .img-text {
+            font-size: 2em;
+        }
+    }
+}
+
+.social-container {
+    height: 60px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+        content: '';
+        border-top: 1px solid $grey;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.social-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0, -50%);
+}
+
+.fa {
+    box-sizing: content-box;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    border: 1px solid $grey;
+    color: $grey;
 }
 
 .dark {
@@ -92,5 +166,14 @@ body {
     .img-text {
         font-size: 1.25em;
         text-transform: initial;
+    }
+}
+
+
+@media(max-width:568px) {
+    #img1,
+    #img2,
+    #img3 {
+        background-attachment: scroll;
     }
 }
