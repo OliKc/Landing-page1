@@ -1,3 +1,179 @@
+$light-color: #eeeeee;
+$dark-color: #323232;
+$grey: #767676;
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
 body {
-    color: red;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lucida Sans Unicode", Verdana, sans-serif;
+    background-color: #85adad;
+
+    > section {
+        text-align: center;
+        line-height: 1.9;
+        padding: 40px 15%;
+
+        h1 {
+            letter-spacing: 2px;
+
+            &:after {
+                content: '';
+                border-top: 1px solid $light-color;
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    footer {
+        min-height: 200px;
+        background-color: #476b6b;
+        position: relative;
+
+        nav {
+            display: inline-block;
+            position: relative;
+            margin-left: 15%;
+
+            section {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px;
+
+                h5 {
+                    text-transform: uppercase;
+                    color: $light-color;
+                }
+
+                ul {
+                    padding-left: 0;
+                    color: $grey;
+                    font-size: 0.875em;
+                }
+            }
+        }
+    }
+}
+
+.img {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-img {
+    min-height: 100%;
+}
+
+.scrl-img {
+    min-height: 450px;
+}
+
+.text-border {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #eeeeee;
+}
+
+.img-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    @media(max-width: 568px) {
+        .img-text {
+            font-size: 2em;
+        }
+    }
+}
+
+.social-container {
+    height: 60px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+        content: '';
+        border-top: 1px solid $grey;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.social-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0, -50%);
+}
+
+.fa {
+    box-sizing: content-box;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    border: 1px solid $grey;
+    color: $grey;
+}
+
+.dark {
+    background-color: #476b6b;
+    color: $light-color;
+}
+
+.light {
+    background-color: #d1e0e0;
+    color: $dark-color;
+}
+
+#img1 {
+    background-image: url('img/forest-landscape-mountain-range-129105.jpg');
+}
+
+#img2 {
+    background-image: url('img/mountains-clouds-forest-trees.jpg');
+}
+
+#img3 {
+    background-image: url('img/pexels-photo-442645.jpg');
+
+    .img-text {
+        font-size: 1.25em;
+        text-transform: initial;
+    }
+}
+
+
+@media(max-width:568px) {
+    #img1,
+    #img2,
+    #img3 {
+        background-attachment: scroll;
+    }
 }
